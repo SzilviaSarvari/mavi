@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MaVi - Maradj még...</title>
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Staatliches&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="contact.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="img/Logo/MAVI_final.png">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./prices.html">Prices</a></li>
+                <li><a href="./pictures.html">Pictures</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="user">
+                <button type="button">Book now</button>
+                <!--Link the button with the website-->
+                <!--Create ::hoover for all the buttons-->
+            </div>
+        </div>
+        <div class="content">
+        <div class="right-col">
+            <h1>CONTACT US</h1>
+            <p>email@email.com</p>
+            <p>01/2-345-678</p>
+            <p>Address 1234 City</p>
+        <div class="contact">
+            <h1>Contact Us</h1>
+            <!--check the form with the given website to send emails-->
+            <form method="POST" action="process.php">
+                <input type="text" name="Name" placeholder="Full Name" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <textarea name="Message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $name = $_POST["Name"];
+                $email = $_POST["Email"];
+                $message = $_POST["Message"];
+    
+                $to = "epica33@gmail.com";  // Replace with the recipient's email address
+                $subject = "Contact Form Submission from $name";
+                $headers = "From: $email";
+    
+                mail($to, $subject, $message, $headers);
+    
+            // Optionally, you can redirect the user to a thank you page
+            header("Location: thank_you.html");
+            } else {
+            echo "Access denied.";
+            }
+            ?>
+
+        </div>
+
+        </div>
+    </div>
+    </div>
+</html>

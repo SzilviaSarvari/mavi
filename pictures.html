@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MaVi - Maradj még...</title>
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Staatliches&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="pictures.css">
+    </head>
+<body>
+    <div id="hero">
+        <div class="navbar">
+            <img src="img/Logo/MAVI_final.png" class="logo">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./prices.html">Prices</a></li>
+                <li><a href="./pictures.html">Pictures</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="user">
+                <button type="button">Book now</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="info">
+                <h1>DISCOVER</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                elit, sed do eiusmod tempor incididunt<br>ut labore et dolore 
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                ullamco<br>laboris nisi ut aliquip ex ea commodo consequat</p>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="preview">
+                <img src="img/Small/small1.jpg" class="active thumbnail">
+                <img src="img/Small/small2.jpg" class="thumbnail">
+                <img src="img/Small/small3.jpg" class="thumbnail">
+                <img src="img/Small/small7.jpg" class="thumbnail">
+                <img src="img/Small/small8.jpg" class="thumbnail">
+                <img src="img/Small/small9.jpg" class="thumbnail">
+                <img src="img/Small/small10.jpg" class="thumbnail">
+                <img src="img/Small/small11.jpg" class="thumbnail">
+                <img src="img/Small/small12.jpg" class="thumbnail">
+                <img src="img/Small/small14.jpg" class="thumbnail">
+                <img src="img/Small/small15.jpg" class="thumbnail">
+                <img src="img/Small/small16.jpg" class="thumbnail">
+                <img src="img/Small/small17.jpg" class="thumbnail">
+                <img src="img/Small/small19.jpg" class="thumbnail">
+                <img src="img/Small/small21.jpg" class="thumbnail">
+                <img src="img/Small/small22.jpg" class="thumbnail">
+                <img src="img/Small/small23.jpg" class="thumbnail">
+                <img src="img/Small/small24.jpg" class="thumbnail">
+                <img src="img/Small/small27.jpg" class="thumbnail">
+                <img src="img/Small/small28.jpg" class="thumbnail">
+                <img src="img/Small/small30.jpg" class="thumbnail">
+                <img src="img/Small/small31.jpg" class="thumbnail">
+            </div>
+            <img src="img/right-arrow-28.png" id="next">
+        </div>
+
+<script>
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        var thumbnail = document.getElementsByClassName("thumbnail");
+        var hero = document.getElementById("hero");
+
+        var backgroundImg = new Array(
+            "img/Large/1.jpeg",
+            "img/Large/2.jpg",
+            "img/Large/3.jpeg",
+            "img/Large/7.jpeg",
+            "img/Large/8.jpeg",
+            "img/Large/9.jpeg",
+            "img/Large/10.jpeg",
+            "img/Large/11.jpeg",
+            "img/Large/12.jpeg",
+            "img/Large/14.jpeg",
+            "img/Large/15.jpeg",
+            "img/Large/16.jpeg",
+            "img/Large/17.jpeg",
+            "img/Large/19.jpeg",
+            "img/Large/21.jpeg",
+            "img/Large/22.jpeg",
+            "img/Large/23.jpeg",
+            "img/Large/24.jpeg",
+            "img/Large/27.jpeg",
+            "img/Large/28.jpeg",
+            "img/Large/30.jpeg",
+            "img/Large/31.jpeg",
+        );
+        let i = 0;
+        next.onclick = function(){
+            hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+            i++;
+        };
+        
+</script>
+
+</body>
+</html>
